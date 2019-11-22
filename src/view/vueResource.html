@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <h1>vueResource讲解</h1>
+    <a href="javascript:void(0);" class="btn btn-primary" @click='GET'>get请求</a>
+    <a href="javascript:void(0);" class="btn btn-primary" @click='POST'>POST请求</a>
+    <a href="javascript:void(0);" class="btn btn-primary" @click='JSONP'>JSONP请求</a>
+  </div>
+  <script src="../../node_modules/vue/dist/vue.min.js"></script>
+  <script src="../../node_modules/vue-resource/dist/vue-resource.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          msg: 'sdas'
+        }
+      },
+      methods: {
+        GET() {
+          this.$http.get('package.json', {
+            params: {
+              id: 123
+            },
+            headers: {}
+          }).then(res => {
+            console.log('正确');
+          }).catch(err => {
+            console.log('错误');
+          })
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>
