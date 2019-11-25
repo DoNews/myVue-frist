@@ -8,6 +8,9 @@ import productList from '@/view/productList'
 import goodDetail from '@/view/goodDetail'
 import Cart from '@/view/cart'
 import vueResource from '@/view/vueResource'
+import allList from '@/view/allList'
+import homePage from '@/view/homePage'
+import gojs from '@/view/gojs'
 
 Vue.use(Router)
 
@@ -23,6 +26,21 @@ export default new Router({
       path: '/info',
       name: 'info',
       component: info
+    },
+    {
+      path: '/homePage',
+      name: 'homePage',
+      component: homePage
+    },
+    {
+      path: '/allList',
+      name: 'allList',
+      component: allList
+    },
+    {
+      path: '/gojs',
+      name: 'gojs',
+      component: gojs
     },
     {
       path: '/yufa',
