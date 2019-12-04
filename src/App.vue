@@ -19,7 +19,7 @@ export default {
   color: #2c3e50;
   height: 100%;
   width: 100%;
-  background: url('./assets/image/bg2.png') no-repeat center center;
+  /* background: url('./assets/image/bg2.png') no-repeat center center; */
 }
 html,
 body {

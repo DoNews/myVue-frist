@@ -6,7 +6,12 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
 import echarts from 'echarts'
-
+import { sum1 } from './common/util'
+// import * as mufunction from './common/util' // 吧js内的所有方法导入到一个统一的字母里面
+// console.log(`公共函数：${mufunction.sum1}`) // 取值调用的话用这个对象调用
+console.log(`公共函数：${sum1}`) // 会把函数体打印出来
+console.log(`公共函数：${sum1()}`) // 报错。NAN函数没参数
+console.log(`公共函数：${sum1(5, 5)}`) // 10
 Vue.prototype.$echarts = echarts
 Vue.use(ElementUI)
 Vue.config.productionTip = false
@@ -18,3 +23,14 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+// define('util', function () {
+//   return {
+//     sum: function () {
+
+//     },
+//     max: function () {
+
+//     }
+//   }
+// })
