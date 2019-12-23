@@ -11,6 +11,7 @@ import vueResource from '@/view/vueResource'
 import allList from '@/view/allList'
 import homePage from '@/view/homePage'
 import gojs from '@/view/gojs'
+import login from '@/view/login'
 
 Vue.use(Router)
 
@@ -19,6 +20,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },

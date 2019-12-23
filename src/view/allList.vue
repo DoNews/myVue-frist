@@ -168,7 +168,7 @@
         </el-tabs>
       </div>
     </div>
-    <div class="foo header" style='font-size:14px'>上海理想信息产业（集团）有限公司提供技术支持</div>
+    <div class="foo header" style='font-size:14px'>上海试试信息产业（集团）有限公司提供技术支持</div>
   </div>
 </template>
 
